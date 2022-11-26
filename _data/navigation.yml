@@ -1,0 +1,24 @@
+# main links
+main:
+  - title: "About"
+    url: /about/
+  - title: "Posts"
+    url: /
+  - title: "Category"
+    url: /categories
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+  
+  
+sidebar-main:
+#  - title: "Web"
+#    children:
+#    - title: "webhacking.kr"
+#      url: "/tags/#webhackinag-kr"
+#      
+#  - title: "System"
+#    children:
+#    - title: "pwnable.kr"
+#      url: "/tags/#pwnable-kr"
