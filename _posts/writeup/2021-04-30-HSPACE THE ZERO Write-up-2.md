@@ -13,13 +13,13 @@ tags: [system, crypto, forensic, misc, writeup]
 
 간단한 ECB 문제입니다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2049.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2049.png)
 
 문제 페이지에서 간단하게 사용법을 확인할 수 있으며
 
 페이지 소스보기를 통해 문제의 소스코드를 확인할 수 있습니다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2050.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2050.png)
 
 ```python
 from flask import Flask, request, render_template_string 
@@ -99,13 +99,13 @@ ecb_dec함수에서 복호화를 했을 때, target 변수인 "i am king got adm
 
 하지만 ecb_enc 함수에서 "i am king got admin!" 이 있을 경우 암호화를 하지 않는 것을 확인할 수 있습니다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2051.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2051.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2052.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2052.png)
 
 ecb 암호화는 블록 단위로 암호화를 진행하기 때문에 블록 단위로 끊어서 "i am king got admin!" 문자열을 암호화 한 후 연결하여 다시 복호화 하면 문제를 해결 할 수 있습니다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2053.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2053.png)
 
 ```python
 import base64
@@ -136,7 +136,7 @@ flag = requests.get(f"{url}/dec?value={data}").text
 print(flag)
 ```
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2054.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2054.png)
 
 FLAG: hspace{Hell0_Electr0nic_C0deBook!}
 
@@ -146,7 +146,7 @@ FLAG: hspace{Hell0_Electr0nic_C0deBook!}
 
 **[문제 구성]**
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2055.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2055.png)
 
  문제를 확인해 보면 Packet Capture 도구로 확인할 수 있는 .pcapng 파일 하나를 다운 받을 수 있습니다.
 
@@ -225,7 +225,7 @@ serverSock.close()
 
 이때 패킷 분석을 어렵게 하기 위해 script구문을 실행시켜 더미 패킷을 추가하였습니다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2056.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2056.png)
 
 위 그림과 같이 7777번 포트로 암호화된 값이 들어오는 것을 확인 할 수 있습니다.
 
@@ -239,7 +239,7 @@ serverSock.close()
 python3 RsaCtfTool.py -n 27606985387162255149739023449107931668458716142620601169954803000803329 -e 65537 --uncipher 27316745514101158385900734386295186110095058620648243002845123389986041
 ```
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2057.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2057.png)
 
 그 결과 그림과 같이 긴 string이 하나의 문자인 것을 확인할 수 있습니다.
 
@@ -305,7 +305,7 @@ $$P = C^d mod (n) $$
 
 pow를 사용하여 값을 처리해 줍니다!
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2058.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2058.png)
 
 그럼 위 그림과 같이 flag를 얻을 수 있습니다.
 
@@ -313,17 +313,17 @@ FLAG: hspace{1_w4nt_t0_b3_4_zz4ngzz4ng_H4ck3r!!}
 
 ## [CRYPTO] Desperado
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__12.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__12.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__13.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__13.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__14.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__14.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__15.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__15.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__16.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__16.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__17.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__17.png)
 
 FLAG: hspace{Did_you_know_parity_bits_are_ignored_in_DES?}
 
@@ -341,26 +341,26 @@ PIE:      **PIE enabled**
 
 - 실행결과
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2059.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2059.png)
 
 - main()
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2060.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2060.png)
 
 - welcome() [offset **0x88A**]
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2061.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2061.png)
 
 - **Red Box** : **Canary**
 - **Purple Box** : **SFP(Stack Frame Pointer)**
 - **Green Box** : **RET**
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2062.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2062.png)
 
 - init()
 - &[pop r15; ret] + 1 → [pop rdi; ret]
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2063.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2063.png)
 
 - exploit.py
 
@@ -414,15 +414,15 @@ PIE:      **PIE enabled**
 
 - 실행결과
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2064.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2064.png)
 
 - main()
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2065.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2065.png)
 
 - fsb(Format String Bug)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2066.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2066.png)
 
 - exploit.py
 
@@ -464,11 +464,11 @@ PIE:      **PIE enabled**
 
 - 실행결과
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2067.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2067.png)
 
 - main()
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2068.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2068.png)
 
 - x64 Shell Code
 
@@ -515,66 +515,66 @@ FLAG: hspace{sC_iN_koreA_iS_biG_deaL}
 
 ## [SYSTEM] Gambling 1
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__3.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__3.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__4.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__4.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__5.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__5.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__6.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__6.png)
 
 FLAG: hspace{Let's_go_up_to_100_million_Bitcoin!!}
 
 ## [SYSTEM] Gambling 2
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__8.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__8.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__9.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__9.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__10.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__10.png)
 
 FLAG: hspace{money_can_be_copied!!!}
 
 
 ## [FORENSIC] nnennory_20H2
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_1.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_1.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_2.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_2.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_3.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_3.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_4.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_4.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_5.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_5.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_6.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_6.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_7.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_7.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_8.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_8.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_9.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_9.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_10.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_10.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_11.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_11.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_12.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_12.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_13.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_13.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_14.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_14.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_15.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_15.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_16.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_16.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_17.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_17.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_18.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_18.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_19.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/hspaceCTF_nnennory20H2_19.png)
 
 FLAG: hspace{I_never_dreamed_about_memory}
 
@@ -586,125 +586,125 @@ Plus Tip: 실제 서비스 환경처럼 리얼리티 하게 진행하기 위해 
 
 Hint로 공격 당시 Pcap를 제공 하였으므로, Web Log의 Access, Error는 살펴볼 필요는 없다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2073.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2073.png)
 
 1-1.  문제 다운로드 및 압축 해제 하기 (Pcap, OVA → VMware files)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2074.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2074.png)
 
 1-2. Wireshark Protocol list중 IPv4 → TCP → (TLS, HTTP)가 존재
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2075.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2075.png)
 
 1-3. IPv4 list에서 (172.16.37.4 / 172.16.37.5 / 172.16.37.12, 172.16.37.69)로 총 4개의 IP 존재를 확인
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2076.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2076.png)
 
 1-4. TCP list (172.16.37.4 / 172.16.37.12 / 172.16.37.69) → 동적 포트 (Dynamic Port) 클라이언트
 
 172.16.37.5는 고정 포트 (80, 443) 서버일 가능성이 높다
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2077.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2077.png)
 
 1-5. HTTP object list 확인
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2078.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2078.png)
 
 1-6. HTTP object list에서 POST의 "application/x-www-form-urlencoded"로 전송되는 데이터 확인 (비정상 행위 X)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2079.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2079.png)
 
 1-7.  HTTP GET method 필터링으로 검색 (너무 많은 패킷의 양)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2080.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2080.png)
 
 1-8. HTTP POST Method 필터링으로 검색 (너무 많고, 비 정상 행위 X) 
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2081.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2081.png)
 
 1-9. TLS Packet에서는 443 Port 암호화하여 통신하는 패킷을 찾을 수 있음.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2082.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2082.png)
 
 2-1 . 가상머신을 실행시키면 위 와 같이 시나리오 상 웹페이지가 변조된걸 볼 수 있음. (HTTP 접근시)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2083.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2083.png)
 
 2-2. HTTPS로 접근시 최신 브라우저 사용시 SSL 알고리즘 상 브라우저에서 차단됨. (공격 당시 취약한 환경에서 SSL 패킷을 분석할 수 있도록 취약한 알고리즘을 선택하기 위해 최신 브라우저에서는 못들어오도록 차단설정함.) → 분석 혼동을 막기 위한 조치 Elliptic Curve Diffie-Hellman Exchange — 타원곡선 디피헬만 키교환 활성화 되어 있으면 서버의 비밀키로도 복호화 X
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2084.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2084.png)
 
 2-3. 메인 페이지 접근(/index.php)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2085.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2085.png)
 
 2-4. 많은 게시판중 "고객 게시판"에만 유일하게 글이 작성되어 있고, 로그인을 하지 않아도 글이 작성됨.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2086.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2086.png)
 
 2-5. 위와 같이 차례대로 게시글이 눌러서 확인해보면 "s.jpg", ".htaccess" 파일과 "photo.png" 파일을 업로드된 걸 볼 수 있음. ".htaccess" 파일의 경우 해당 디렉터리에 접근제어 (Apache 설정)을 변경할 수 있음
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2087.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2087.png)
 
 2-6. 첨부 파일인 ".htaccess" 파일 다운로드 시도시 위 그림와 같이 "파일이 존재 하지 않습니다." 문구가 출력됨.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2088.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2088.png)
 
 2-7. 첨부 파일인 "photo.png" 파일 다운로드 시도시 위 그림와 같이 "파일이 존재 하지 않습니다." 문구가 출력됨. 
 
 파일을 삭제를 하기 위해서는 정상적인 게시글 수정 절차를 거치면 파일이 존재하지 않지만. 현재는 비정상적인 행위로 인해 파일 목록만 존재하고 실제 파일은 존재하지 않으므로, 공격 행위일 가능성이 높다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2089.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2089.png)
 
 3-1. Pcap 파일은 Wireshark로 분석을 할 수 있지만 한눈에 보기 위해 "Network Miner"도 종종 사용된다.
 
 위 그림와 같이 "172.16.37.5"가 리눅스인걸 알 수 있다. (TTL로 파악)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2090.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2090.png)
 
 3-2. 삭제된 게시글에 업로드된 해당 파일을 검색 해보았지만 존재하지가 않는다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2091.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2091.png)
 
 3-3. 삭제된 게시글에 업로드된 해당 파일을 검색 해보았지만 존재하지가 않는다.
 
 평문 HTTP에서는 더이상 이상행위가 기록되지 않았음으로, TLS(암호화된) 패킷을 분석을 시도한다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2092.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2092.png)
 
 4-1. TLS 키 교환 하기전 Client가 사용할 암호 알고리즘 리스트를 서버측에 전송한다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2093.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2093.png)
 
 4-2. Diffie-Hellman 디피헬만 암호화 방식이 아닌 서버의 비밀키로 복호화가 가능한 취약한 알고리즘으로 연결을 시도
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2094.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2094.png)
 
 5-1. 제공된 계정으로 서버에 로그인
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2095.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2095.png)
 
 5-2. 웹 루트 디렉터리를 찾는다. (패키지로 아파치를 설치했다면 기본적으로 /var/www/html/"에 존재 하지만 현재 컴파일 작업으로 웹 루트 디렉터리가 다른곳으로 설정되어 있다.
 
 찾는 방법은 프로세스를 추적하여 설정 값을 보거나 아니면 위와 같이 php 파일 및 아파치 설정 파일을 검색하여 위치를 찾을 수 있다. ("/usr/local/dongdonge/htdocs/")
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2096.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2096.png)
 
 5-3. "/usr/local/dongdonge/conf/extra"의 ssl 관련 설정값 확인
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2097.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2097.png)
 
 5-4. SSL Server Private key 위치 확인
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2098.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2098.png)
 
 5-5. SSL 관련 키 확인
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2099.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%2099.png)
 
 6-1. 비밀키를 추출하여 Wireshark에 서버 아이피 "172.16.37.5"와 TLS으로 암호화된 서비스의 포트 443과 Key를 등록한다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20100.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20100.png)
 
 6-2. 암호화된 TLS 패킷이 복호화되어 평문으로 보여진다.
 
@@ -714,41 +714,41 @@ Hint로 공격 당시 Pcap를 제공 하였으므로, Web Log의 Access, Error�
 
 웹쉘 경우 GET으로 명령어 사용시 서버측 Access 로그에 행위가 기록됨으로, 대부분 악성 웹쉘은 POST로 전송한다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20101.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20101.png)
 
 6-3. 공격자가 3개의 파일 "s.jpg", "photo.jpg", ".htaccess" 파일이 업로드된걸 볼 수 있으며,
 
 그중 "s.jpg" 파일은 정상 이미지 파일로 확인할 수 있다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20102.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20102.png)
 
 6-4. 하지만 "photo.png"의 시그니처와 업로드된 파일 내용을 보면 이미지가 아닌 eval함수와 알수 없게 암호화된 값이 삽입되어 있는걸 볼 수 있으며,
 
 ".htaccess" 파일의 경우 php 실행 파일을 ".php" 뿐만 아니라 ".jpg", ".jpeg", ".png" 파일도 PHP 코드로 실행할 수 있도록 설정되어 있다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20103.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20103.png)
 
 6-5. 업로드된 악성 쉘 (웹쉘)을 분석하기 위해 "photo.png"로 연결된 패킷을 필터하고 검색한다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20104.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20104.png)
 
 6-6. 처음에는 GET으로 1차 연결한다. 하지만 해당 웹쉘은 타사용자와 서버 관리자에게는 보여지면 안되기에 서버에서는 응답으로 200OK를 반환하지만 리스폰 되는 값은 페이크로 "해당 페이지가 존재하지 않습니다"라는 404 Not Found로 보여지게 된다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20105.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20105.png)
 
 6-7. 이후 POST로 웹쉘을 작동하기 위해 패스워드를 "Beretta92"를 삽입하여 웹쉘이 동작하도록 수행한다.
 
 이후 "CMD" 파라미터에 "ls" 명령어를 실행한다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20106.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20106.png)
 
 6-8. 응답값을 확인하여 웹쉘이 정상적으로 작동하여 명령이 실행된걸 확인할 수 있다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20107.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20107.png)
 
 6-9. 그리고 특정 명령 "aa"를 삽입하여 무언가 행위가 이뤄지고 해당 경로에 플래그와 index.html 파일이 압축이 해제된걸 볼 수 있다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20108.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20108.png)
 
 6-10. 이후 공격자는 공격행위에 대한 흔적을 지우기 위해 "photo.png" 파일과 ".htaccess" 파일을 제거하고
 
@@ -756,17 +756,17 @@ Hint로 공격 당시 Pcap를 제공 하였으므로, Web Log의 Access, Error�
 
 즉 웹쉘이 완벽하게 삭제된걸 볼 수 있다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20109.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20109.png)
 
 6-11. Wireshark로 해당 웹쉘을 추출하면 위와 같은 모습으로 되어 있다.
 
 PHP 코드로 작성되어 있으며, 문자열이 gz압축되어 있으며, 이걸 압축 해제하여 eval함수로 실행한다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20110.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20110.png)
 
 6-12. 해당 악성코드(웹쉘)을 분석하기 위해 eval function으로 실행하지 말고 echo로 문자열을 해제한 값을 출력한다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20111.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20111.png)
 
 6-13. PHP Cli이 설치되어 있다면, 위와 같은 명령으로 바로 실행이 가능하다.
 
@@ -774,11 +774,11 @@ PHP 코드로 작성되어 있으며, 문자열이 gz압축되어 있으며, 이
 
 <코드 설명해주기 → 2중 문자열 압축>
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20112.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20112.png)
 
 6-14. "6-13"코드를 vscode로 쓰-윽 더 한눈에 보기 쉽게 볼 수 있다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20113.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20113.png)
 
 6-15. 이중 문자열 압축된걸 또 같은 방법으로 해제 한다면 위 그림와 같이 볼 수 있다.
 
@@ -790,15 +790,15 @@ PHP 코드로 작성되어 있으며, 문자열이 gz압축되어 있으며, 이
 
 또한 위 방법은 실제로 악성코드로 내부망 감염을 위해 먼저 웹방화벽을 우회하기 위한 목적으로 위와 같은 원리로 진행함.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20114.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20114.png)
 
 해당 웹쉘을 분석하여 숨어져있는 웹쉘을 추출하여 암호화된 집 파일을 해제하면 2개의 파일을 볼 수 있다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20115.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20115.png)
 
 6-16. 변조 당한 웹 페이지다.
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20116.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/Untitled%20116.png)
 
 6-17. 요건 플래그다.
 
@@ -807,18 +807,18 @@ FLAG: hspace{F@ke_zBxAs_H@ck_VMBinwBYb_Sell}
 
 ## [MISC] EZ_Babymath
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__18.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__18.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__19.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__19.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__20.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__20.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__21.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__21.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__22.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__22.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__23.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__23.png)
 
-![](/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__24.png)
+![](https://cdn.jsdelivr.net/gh/SaturnX-Korea/saturnx-korea.github.io/assets/post/HSPACE%20CTF%20THE%20ZERO%20Write-up%2091ac8e6fcfa64ea3ba4259919f19470e/20210428HSPACE_CTF_1__24.png)
 
 FLAG: hspace{do_the_math_if_you_can!!}
