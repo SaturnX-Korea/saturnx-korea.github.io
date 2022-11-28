@@ -71,13 +71,13 @@ tags: [travel,defcamp, ctf]
 
 지금에서 생각해보면 간단한 문제였다. `aiohttp` 에서 보내는 요청에서 ssl 에러가 발생한 것이었는데, 시간에 쫓겨 당황한 탓인지 requests 모듈을 사용해 개발한 것으로 생각하고 에러를 고치려고 시도하다 보니, flag인증은 다른 팀원이 로그에서 Ctrl c+v를 하고 있는 상황이 되어버렸다. 
 
-![Untitled](https://res.cloudinary.com/imreplay/image/upload/q_auto/part3/Untitled%201.png)
+![Untitled](https://res.cloudinary.com/imreplay/image/upload/q_auto/part3/Untitled_1.png)
 
 결국 약 2시간 정도를 허비해 버린 채 기존에 만들었던 exploit 자동화 도구를 포기하고 빠르게 python으로 개인 PC에서 공격 코드를 실행하는 방향으로 변경했다.
 
 이미 꽤 많은 취약점들이 발견되어 우리 서버에 공격이 들어왔지만, 수작업으로 열심히 flag를 인증 하는 작업과 다른 팀원들이 새로운 취약점을 찾아서 대회 초반까지는 상위권을 유지할 수 있었다.
 
-![Untitled](https://res.cloudinary.com/imreplay/image/upload/q_auto/part3/Untitled%202.png)
+![Untitled](https://res.cloudinary.com/imreplay/image/upload/q_auto/part3/Untitled_2.png)
 
 대회 중반을 넘어서자 우리 팀 대회 서버의 root권한까지 탈취 당해 다수의 서비스에서 SLA 체크를 통과하지 못하는 사태가 발생하게 되었다. ~~문제 서버에 실행만 하면 root쉘을 주는 친구가 숨어 있을 줄은 몰랐지…~~
 
@@ -174,7 +174,7 @@ Defcamp 행사장에 도착해서 가장 먼저 간 곳은 바로 락픽(Lock Pi
 
 다음 날 한국으로 가거나 다른 나라를 여행하는 친구들이 있어서, 다 같이 루마니아에 있을 수 있는 마지막 밤 11일 저녁, 우리는 다시 old town으로 향했다. 이쯤에서 *old town이 어떤 곳이길래 저렇게 자주 갈까* 생각하는 사람들을 위해 간단히 설명하자면 한국의 홍대 클럽거리와 신촌 그 중간 쯤 느낌이었다. 북적북적하고 사람도 많은 곳!
 
-![Untitled](https://res.cloudinary.com/imreplay/image/upload/q_auto/part3/Untitled%203.png)
+![Untitled](https://res.cloudinary.com/imreplay/image/upload/q_auto/part3/Untitled_3.png)
 
 일단 부지런하게 놀기 위해 맛있는 걸 먹어야 하기 때문에 우리는 근처 식당에서 각자 먹고싶은 걸 시켰다. 난 까르보나라 파스타와 사워크림이 올라간 감자, 글랜피딕 15y 1잔과 맥주 1잔을 시켰다. 아래 사진에 나온 메뉴들을 다 합해서 97레이(한화 약 2.9만원 정도)였는데 가성비 있게 즐긴 것 같아서 괜찮았다.
 
