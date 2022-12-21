@@ -280,4 +280,7 @@ tags: [travel,defcamp, ctf]
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YuHRFO1pviw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+> SaturnX팀 Defcamp CTF 해킹대회 참여 현장 스케치 [0:41](https://youtu.be/PWygIaQbmzo?t=41)
+
+
 -루마니아 여행과 함께하는 Defcamp CTF 2022 Final 참가 후기 fin-
