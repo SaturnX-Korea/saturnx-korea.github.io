@@ -1,5 +1,11 @@
-# (Draft)루마니아 여행과 함께하는 Defcamp CTF 2022 Final 참가 후기 - part 4. 나홀로 루마니아 여행기(fin)
+---
+title: "루마니아 여행과 함께하는 Defcamp CTF 2022 Final 참가 후기 - part 4. 나홀로 루마니아 여행기(fin)"
+author: Imreplay
+categories:
+  - review
+tags: [travel,defcamp, ctf]
 
+---
 
 > 곧 루마니아에 혼자 남겨지게 될 재연.. 호텔 조식을 먹고 발걸음을 옮기는데…
 
