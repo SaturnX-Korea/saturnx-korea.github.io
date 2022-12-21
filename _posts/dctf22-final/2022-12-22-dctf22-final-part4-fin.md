@@ -191,7 +191,7 @@ tags: [travel,defcamp, ctf]
 
 루마니아 여행의 마지막 날 아침이 밝았다. 에어비앤비에서 체크아웃을 하고 호스트분과 사진도 찍고 비행기 출발 전까지 자유롭게 루마니아를 돌아다녔다.
 
-![20221114_110251(0).jpg](https://res.cloudinary.com/imreplay/image/upload/q_auto/part4/20221114_110251(0).jpg)
+![20221114_110251(0).jpg](https://res.cloudinary.com/imreplay/image/upload/q_auto/part4/20221114_110251_0.jpg)
 
 루마니아에서 맛잇게 먹었던 LUCA를 시작으로 주변에 카페에서 커피도 한잔.
 
@@ -278,6 +278,6 @@ tags: [travel,defcamp, ctf]
 
 ![Untitled](https://res.cloudinary.com/imreplay/image/upload/q_auto/part4/Untitled.png)
 
-<iframe width="560" height="315" src="[https://www.youtube.com/embed/PWygIaQbmzo](https://www.youtube.com/embed/PWygIaQbmzo)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YuHRFO1pviw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 -루마니아 여행과 함께하는 Defcamp CTF 2022 Final 참가 후기 fin-
